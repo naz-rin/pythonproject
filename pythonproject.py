@@ -1,15 +1,25 @@
-import random
-wires = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-bomb = random.sample(wires, 2)
-safe = random.sample(wires, 2)
+import time
 
-def defuse():
-    print("The bomb wil explode unless the correct wire is cut.")
-    print
-    print("The wires are numbered 1, 2, 3, 4, and 5")
-    cutter = raw_input("Which wire?: ")
-    chances = 4
+wall  = "                                ================="
+enter = "                                ---||||||||||||||"
+maze1 = "                                ||X||----||----||"
+maze2 = "                                ||X||X||X||X||X||"
+maze3 = "                                ||X||X||X||X||X||"
+maze4 = "                                ||X||X||X||X||X||"
+maze5 = "                                ||----||----||X||"
+leave = "                                ||||||||||||||---"
+wall2 = "                                ================="
+
+def maze():
+    print wall
+    print enter
+    print maze1
+    print maze2
+    print maze3
+    print maze4
+    print maze5
+    print leave
+    print wall2
     
-    while cutter != safe:
-        chances = chances - 1
-        cutter = raw_input("Which wire?: ")
+def script():
+    
